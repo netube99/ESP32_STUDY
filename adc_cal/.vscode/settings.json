@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "adc.h": "c",
+        "esp_adc_cal.h": "c"
+    }
+}

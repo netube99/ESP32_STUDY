@@ -1,3 +1,3 @@
 # ESP32_STUDY
 
-ESP-IDF 入门练习代码
+ESP-IDF 入门学习代码

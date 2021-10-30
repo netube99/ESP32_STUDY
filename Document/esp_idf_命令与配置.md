@@ -17,8 +17,6 @@ ESP-IDF 命令列表
 idf.py --help
 ```
 
-
-
 ## 创建项目流程
 
 生成新项目
@@ -51,6 +49,22 @@ idf.py menuconfig
 idf.py build
 idf.py -p [串口号] flash
 
-编译并烧录
-idf.py build flash -p [串口号]
+编译并使用高速烧录
+idf.py -p [串口号] -b [波特率] flash
+idf.py -p COM3 -b 2000000 flash
 ```
+
+## 项目其他命令
+
+每当项目从 github 上 clone 一个工程到本地后，或者手动修改过工程内部的命名或结构后
+
+```
+idf.py reconfigure
+```
+
+在工程中加入组件
+
+```
+idf.py -C components create-component [组件名]
+```
+

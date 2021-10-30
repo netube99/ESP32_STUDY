@@ -59,9 +59,9 @@ idf.py -p COM3 -b 2000000 flash
 idf.py -p COM3 -b 2000000 flash monitor
 ```
 
-## 项目其他命令
+## 其他命令
 
-使用 github 的时候应该在 git 管理的根目录下添加文件 .gitignore 文件，并在内部添加不需要跟踪的文件夹，例如 build 文件夹是不需要版本控制的，则在 .gitignore 中添加 build ；每当项目从 github 上 clone 一个工程到本地后，或者手动修改过工程内部的命名或结构后
+每当项目从 github 上 clone 一个工程到本地后，或者手动修改过工程内部的命名或结构后
 
 ```
 idf.py reconfigure
@@ -81,5 +81,15 @@ idf.py reconfigure
 idf.py clean
 清理整个 build 文件夹的内容
 idf.py fullclean
+```
+
+## 注意事项
+
+使用 github 的时候应该在 git 管理的根目录下添加文件 .gitignore 文件，并在内部添加不需要跟踪的文件夹，例如 build 文件夹是不需要版本控制的，则在 .gitignore 中添加 build ，一般 c_cpp_properties.json 也是需要屏蔽的；
+
+使用 VSCode 开发的时候 需要在 c_cpp_properties.json 的 compilerPath 项准确设置编译器地址
+
+```
+"compilerPath": "C:\\Users\\zhong\\.espressif\\tools\\xtensa-esp32-elf\\esp-2021r1-8.4.0\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc.exe"
 ```
 

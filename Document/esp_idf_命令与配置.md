@@ -3,18 +3,10 @@
 [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/index.html)
 [使用 ESP-IDF 构建系统](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-guides/build-system.html#id3)
 
-在当前CMD使用ESP-IDF
-```
-%userprofile%\esp\esp-idf\export.bat
-```
-在当前PowerShell使用ESP-IDF
-```
-.$HOME/esp/esp-idf/export.ps1
-```
+在 Linux 当前终端添加 ESP-IDF 的环境变量
 
-ESP-IDF 命令列表
 ```
-idf.py --help
+. $HOME/esp/esp-idf/export.sh
 ```
 
 ## 创建项目流程
@@ -31,10 +23,10 @@ df.py create-project --path [项目目录] [项目名称]
 
 设置目标芯片
 
-esp32 — 适用于 ESP32-D0WD、ESP32-D2WD、ESP32-S0WD (ESP-SOLO)、ESP32-U4WDH、ESP32-PICO-D4
-esp32s2— 适用于 ESP32-S2
-esp32c3— 适用于 ESP32-C3
-新型号均可以此类推
+* esp32 — 适用于 ESP32-D0WD、ESP32-D2WD、ESP32-S0WD (ESP-SOLO)、ESP32-U4WDH、ESP32-PICO-D4
+* esp32s2— 适用于 ESP32-S2
+* esp32c3— 适用于 ESP32-C3
+* 新型号均可以此类推
 
 ```
 idf.py set-target [目标芯片]
@@ -59,7 +51,7 @@ idf.py -p COM3 -b 2000000 flash
 idf.py -p COM3 -b 2000000 flash monitor
 ```
 
-## 其他命令
+## 项目管理命令
 
 每当项目从 github 上 clone 一个工程到本地后，或者手动修改过工程内部的命名或结构后
 
@@ -77,7 +69,7 @@ idf.py reconfigure
 清理编译生成的文件
 
 ```
-只清理链接后的文件
+基础的清理
 idf.py clean
 清理整个 build 文件夹的内容
 idf.py fullclean

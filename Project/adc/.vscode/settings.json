@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "adc.h": "c",
-        "adc_common.h": "c",
-        "esp_system.h": "c",
-        "adc_types.h": "c",
-        "esp_adc_cal.h": "c"
-    }
-}

@@ -1,6 +1,7 @@
 # ESP-IDF 命令与配置笔记
 
 [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/index.html)
+
 [使用 ESP-IDF 构建系统](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-guides/build-system.html#id3)
 
 在 Linux 当前终端添加 ESP-IDF 的环境变量

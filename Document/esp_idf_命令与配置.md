@@ -1,11 +1,9 @@
 # ESP-IDF 命令与配置笔记
 
-[ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/index.html)
-
-[使用 ESP-IDF 构建系统](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-guides/build-system.html#id3)
+* [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/index.html)
+* [使用 ESP-IDF 构建系统](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-guides/build-system.html#id3)
 
 在 Linux 当前终端添加 ESP-IDF 的环境变量
-
 ```
 . $HOME/esp/esp-idf/export.sh
 ```
@@ -22,7 +20,7 @@ idf.py create-project
 df.py create-project --path [项目目录] [项目名称]
 ```
 
-设置目标芯片
+设置目标芯片型号
 
 * esp32 — 适用于 ESP32-D0WD、ESP32-D2WD、ESP32-S0WD (ESP-SOLO)、ESP32-U4WDH、ESP32-PICO-D4
 * esp32s2— 适用于 ESP32-S2

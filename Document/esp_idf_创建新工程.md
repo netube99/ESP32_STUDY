@@ -17,19 +17,18 @@ idf.py reconfigure
 ```
 
 ### VSCode 的操作
-在工程根目录下打开 VSCode，Ctrl + Shift + P 打开插件菜单，选择 C/C++：编辑配置（JSON），根目录出现文件夹 .vscode，内含文件 c_cpp_properties.json，在 c_cpp_properties.json 中找到 compilerPath 项，更改项内容为当前芯片型号对应的编译器的地址，目前芯片型号为 esp32 所以编译器地址为：
+* 在工程根目录下打开 VSCode，Ctrl + Shift + P 打开插件菜单，选择 C/C++：编辑配置（JSON），根目录出现文件夹 .vscode，内含文件 c_cpp_properties.json，在 c_cpp_properties.json 中找到 compilerPath 项，更改项内容为当前芯片型号对应的编译器的地址；
+* 在 c_cpp_properties.json 中添加新项 compileCommands ，内容设置为 build 文件夹下 compile_commands.json 文件的地址；
+* intelliSenseMode 项修改为 windows-gcc-x86：
 
 ```
-"compilerPath": "C:\\Users\\zhong\\.espressif\\tools\\xtensa-esp32-elf\\esp-2021r1-8.4.0\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc.exe"
-```
-
-在 c_cpp_properties.json 中添加新项 compileCommands ，内容设置为 build 文件夹下 compile_commands.json 文件的地址 :
-
-```
-"compileCommands": "build\\compile_commands.json"
+"compilerPath": "C:\\Users\\zhong\\.espressif\\tools\\xtensa-esp32-elf\\esp-2021r1-8.4.0\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc.exe",
+"compileCommands": "build\\compile_commands.json",
+"intelliSenseMode": "windows-gcc-x86"
 ```
 
 ### Git 的操作
+
 为了让 Git 在跟踪工程代码时不要记录目录绝对值和 build 文件夹，在 Git 管理的根目录下新建文件 .gitignore，内容如下：
 
 ```

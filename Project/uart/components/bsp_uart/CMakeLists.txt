@@ -1,2 +1,2 @@
-idf_component_register(SRCS "dht11.c"
+idf_component_register(SRCS "bsp_uart.c"
                     INCLUDE_DIRS "include")

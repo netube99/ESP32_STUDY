@@ -1,32 +1,37 @@
-menu "Echo Example Configuration"
+menu "Test Uart Config"
 
     config CONFIG_TEST_UART_PORT
     int "uart port number"
     range 0 2
+    default 2
     help
         witch uart you want to use ?
 
     config CONFIG_TEST_UART_TXD
     int "uart tx pin"
     range 0 34
+    default 17
     help
         the uart tx pin
 
     config CONFIG_TEST_UART_RXD
     int "uart rx pin"
     range 0 34
+    default 16
     help
         the uart rx pin
 
     config CONFIG_TEST_UART_BAUD
     int "uart baud"
     range 9600 2000000
+    default 115200
     help
         The fastest is the best !!!
         
     config CONFIG_TEST_UART_BUFFER_SIZE
-    int "uart tx pin"
+    int "uart tx buffer size"
     range 128 1024
+    default 256
     help
         The bigger it is not necessarily the better ...
 
